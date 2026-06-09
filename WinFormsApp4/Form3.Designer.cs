@@ -28,30 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
             listBox1 = new ListBox();
             listBox2 = new ListBox();
             listBox3 = new ListBox();
             panel1 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Captura_de_ecrã_2026_06_01_141851_removebg_preview;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(4, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(149, 52);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // listBox1
             // 
@@ -60,6 +48,7 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(259, 204);
             listBox1.TabIndex = 1;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
@@ -68,6 +57,7 @@
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(259, 204);
             listBox2.TabIndex = 2;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // listBox3
             // 
@@ -76,6 +66,7 @@
             listBox3.Name = "listBox3";
             listBox3.Size = new Size(254, 204);
             listBox3.TabIndex = 3;
+            listBox3.SelectedIndexChanged += listBox3_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -87,15 +78,16 @@
             panel1.Size = new Size(814, 73);
             panel1.TabIndex = 4;
             // 
-            // button1
+            // button3
             // 
-            button1.Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(17, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(247, 66);
-            button1.TabIndex = 0;
-            button1.Text = "Kanban Board";
-            button1.UseVisualStyleBackColor = true;
+            button3.Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(562, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(247, 66);
+            button3.TabIndex = 2;
+            button3.Text = "Relatórios";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -106,16 +98,18 @@
             button2.TabIndex = 1;
             button2.Text = "Tarefas";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // button3
+            // button1
             // 
-            button3.Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(562, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(247, 66);
-            button3.TabIndex = 2;
-            button3.Text = "Relatórios";
-            button3.UseVisualStyleBackColor = true;
+            button1.Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(17, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(247, 66);
+            button1.TabIndex = 0;
+            button1.Text = "Kanban Board";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -160,18 +154,15 @@
             Controls.Add(listBox3);
             Controls.Add(listBox2);
             Controls.Add(listBox1);
-            Controls.Add(pictureBox1);
             Name = "Form3";
             Text = "Form3";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Form3_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private ListBox listBox1;
         private ListBox listBox2;
         private ListBox listBox3;

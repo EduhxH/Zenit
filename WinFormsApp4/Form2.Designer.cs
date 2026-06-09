@@ -54,6 +54,7 @@
             label3.Size = new Size(100, 20);
             label3.TabIndex = 16;
             label3.Text = "Já tem conta?";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -81,6 +82,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(374, 27);
             textBox2.TabIndex = 13;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
@@ -88,6 +90,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(374, 27);
             textBox1.TabIndex = 12;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -97,12 +100,13 @@
             button1.TabIndex = 11;
             button1.Text = "CRIAR CONTA";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.Captura_de_ecrã_2026_06_01_140041;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.Image = Zenit.Properties.Resources.Captura_de_ecrã_2026_06_01_140041;
             pictureBox1.Location = new Point(317, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(228, 98);
@@ -146,6 +150,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(374, 27);
             textBox3.TabIndex = 17;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 

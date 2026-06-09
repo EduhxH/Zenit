@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
+            label5 = new Label();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             button1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -39,10 +40,9 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -55,16 +55,16 @@
             panel1.Size = new Size(118, 455);
             panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // label5
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.Captura_de_ecrã_2026_06_01_140041;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(313, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(228, 98);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            label5.AutoSize = true;
+            label5.Font = new Font("Perpetua Titling MT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(31, 105);
+            label5.Name = "label5";
+            label5.Size = new Size(49, 220);
+            label5.TabIndex = 9;
+            label5.Text = "Z\r\nE\r\nN\r\nI\r\nT";
+            label5.TextAlign = ContentAlignment.TopCenter;
             // 
             // pictureBox2
             // 
@@ -76,6 +76,17 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.Image = Zenit.Properties.Resources.Captura_de_ecrã_2026_06_01_140041;
+            pictureBox1.Location = new Point(313, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(228, 98);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
             // button1
             // 
             button1.Location = new Point(293, 318);
@@ -84,6 +95,7 @@
             button1.TabIndex = 2;
             button1.Text = "ENTRAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -91,6 +103,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(374, 27);
             textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -98,6 +111,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(374, 27);
             textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label1
             // 
@@ -127,6 +141,7 @@
             label3.Size = new Size(115, 20);
             label3.TabIndex = 7;
             label3.Text = "Não tem conta?";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -136,17 +151,7 @@
             label4.Size = new Size(132, 20);
             label4.TabIndex = 8;
             label4.Text = "Esqueceu a senha?";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Perpetua Titling MT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(31, 105);
-            label5.Name = "label5";
-            label5.Size = new Size(49, 220);
-            label5.TabIndex = 9;
-            label5.Text = "Z\r\nE\r\nN\r\nI\r\nT";
-            label5.TextAlign = ContentAlignment.TopCenter;
+            label4.Click += label4_Click;
             // 
             // Form1
             // 
@@ -164,10 +169,11 @@
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
